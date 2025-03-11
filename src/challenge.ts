@@ -39,7 +39,9 @@ function addReview(
   comment: string
 ): ReviewedBook {
   // write your code here...
-
+  book.reviews
+    ? book.reviews.push({ reviewer: reviewer, comment: comment })
+    : (book.reviews = [{ reviewer: reviewer, comment: comment }]);
   return book;
 }
 
